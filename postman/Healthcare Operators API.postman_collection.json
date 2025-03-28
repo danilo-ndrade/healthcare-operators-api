@@ -1,0 +1,38 @@
+{
+	"info": {
+		"_postman_id": "f2fa2f6e-dc44-4ee9-a6b7-af5f35b6ff3c",
+		"name": "Healthcare Operators API",
+		"description": "API para consulta de Operadoras de Planos de Saúde.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29283850"
+	},
+	"item": [
+		{
+			"name": "search",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/busca-operadores?busca=ADMINISTRADORA",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"busca-operadores"
+					],
+					"query": [
+						{
+							"key": "busca",
+							"value": "ADMINISTRADORA"
+						}
+					]
+				},
+				"description": "A rota recebe o parâmetro 'busca' que é usado para buscar na coluna 'Razao Social' a operadora."
+			},
+			"response": []
+		}
+	]
+}
