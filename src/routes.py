@@ -5,9 +5,10 @@ from .models import Operator
 router = APIRouter()
 
 @router.get("/busca-operadores", response_model=list[Operator])
-def search(busca: str):
+def search(busca: str, numero_ans: bool = False, cnpj: bool = False, razao_social: bool = False):
+    print(busca, numero_ans, cnpj, razao_social)
     try:
-        data = search_operators(busca)
+        data = search_operators(busca, numero_ans, cnpj, razao_social)
         print(len(data))
         return data
     except Exception as e:
