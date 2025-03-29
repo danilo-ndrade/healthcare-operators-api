@@ -2,10 +2,10 @@ from .db import load_data
 import pandas as pd
 
 def search_operators(busca:str):
-    df = load_data()
-
-    if df is None:
-        return [];
+    try:
+        df = load_data()
+    except Exception as e:
+        return str(e)
 
     result = df[df['Razao_Social'].str.contains(busca, case=False, na=False)]
 
@@ -13,6 +13,5 @@ def search_operators(busca:str):
     result = result.astype(str)
 
     result = result.where(pd.notnull(result), "")
-
 
     return result.to_dict(orient='records')
