@@ -13,10 +13,6 @@ def search_operators(
     except Exception as e:
         return str(e)
     
-    print(busca, ans_number, cnpj, company_name, 'testeeee')
-
-    # result = df[df['Razao_Social'].str.contains(busca, case=False, na=False)]
-
     if 'CNPJ' in df.columns:
         df['CNPJ'] = df['CNPJ'].astype(str)
     if 'Registro_ANS' in df.columns:
@@ -29,9 +25,12 @@ def search_operators(
     elif company_name:
         result = df[df['Razao_Social'].str.contains(busca, case=False, na=False)]
 
+    print(result)
+
+    result = result.where(pd.notnull(result), " ")
+    
     #transforma os valores em string pois existem inconsistencias nos tipos de dados
     result = result.astype(str)
 
-    result = result.where(pd.notnull(result), "")
 
     return result.to_dict(orient='records')

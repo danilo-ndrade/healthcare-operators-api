@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "f2fa2f6e-dc44-4ee9-a6b7-af5f35b6ff3c",
+		"_postman_id": "74c29f28-caf0-419a-95a5-2b5ba353cb20",
 		"name": "Healthcare Operators API",
 		"description": "API para consulta de Operadoras de Planos de Saúde.",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
@@ -8,12 +8,12 @@
 	},
 	"item": [
 		{
-			"name": "search",
+			"name": "search-by-name",
 			"request": {
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8000/api/busca-operadores?busca=ADMINISTRADORA",
+					"raw": "http://localhost:8000/api/busca-operadores?busca=ADMINISTRADORA&razao_social=true",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -27,10 +27,104 @@
 						{
 							"key": "busca",
 							"value": "ADMINISTRADORA"
+						},
+						{
+							"key": "razao_social",
+							"value": "true"
+						},
+						{
+							"key": "cnpj",
+							"value": "false",
+							"disabled": true
+						},
+						{
+							"key": "numero_ans",
+							"value": "false",
+							"disabled": true
 						}
 					]
 				},
 				"description": "A rota recebe o parâmetro 'busca' que é usado para buscar na coluna 'Razao Social' a operadora."
+			},
+			"response": []
+		},
+		{
+			"name": "search-by-cnpj",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/busca-operadores?busca=19541931000125&cnpj=true",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"busca-operadores"
+					],
+					"query": [
+						{
+							"key": "busca",
+							"value": "19541931000125"
+						},
+						{
+							"key": "razao_social",
+							"value": "false",
+							"disabled": true
+						},
+						{
+							"key": "cnpj",
+							"value": "true"
+						},
+						{
+							"key": "numero_ans",
+							"value": "false",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "search-by-ans",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/busca-operadores?busca=419761&numero_ans=true",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"busca-operadores"
+					],
+					"query": [
+						{
+							"key": "busca",
+							"value": "419761"
+						},
+						{
+							"key": "razao_social",
+							"value": "false",
+							"disabled": true
+						},
+						{
+							"key": "cnpj",
+							"value": "false",
+							"disabled": true
+						},
+						{
+							"key": "numero_ans",
+							"value": "true"
+						}
+					]
+				}
 			},
 			"response": []
 		}
