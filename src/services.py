@@ -25,9 +25,7 @@ def search_operators(
     if ans_number:
         result = df[df['Registro_ANS'].str.contains(busca, case=False, na=False)]
     elif cnpj:
-        print('cnpj')
         result = df[df['CNPJ'].str.contains(busca, case=False, na=False)]
-        print(result)
     elif company_name:
         result = df[df['Razao_Social'].str.contains(busca, case=False, na=False)]
 
