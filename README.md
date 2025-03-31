@@ -42,6 +42,12 @@ API desenvolvida com FastAPI com rota para busca de operadoras de plano de saúd
 
 ---
 
+## Coleção postman
+
+- O projeto conta com uma coleção do postman contendo 3 requisições de busca utilizando cada filtro. 
+
+---
+
 ## Estrutura do projeto
 
 1. src/
@@ -55,3 +61,7 @@ API desenvolvida com FastAPI com rota para busca de operadoras de plano de saúd
 
 2. data/
    - Relatorio_cadop.csv: Arquivo CSV com os dados das operadoras de saúde.
+
+3. postman/
+
+   - Coleção postman com requisições de busca utilizando as 3 opções de filtro.
