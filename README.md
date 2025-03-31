@@ -5,7 +5,7 @@ API desenvolvida com FastAPI com rota para busca de operadoras de plano de saúd
 ## Funcionalidades
 
 - Importação de dados de operadoras de saúde a partir de um arquivo CSV.
-- Exposição de endpoints para consulta e manipulação de dados.
+- Exposição de endpoints para consulta de dados.
 - Filtros para refinação da busca
 
 ---
