@@ -1,6 +1,6 @@
 # Healthcare Operators API
 
-API desenvolvida com FastAPI com rota para busca de operadoras de plano de saúde. A base de dados utilizada é publica e forncecida pela Agência Nacional de Saúde Suplementar (https://dadosabertos.ans.gov.br/FTP/PDA/operadoras_de_plano_de_saude_ativas/)
+API desenvolvida com FastAPI com rota para busca de operadoras de plano de saúde. A base de dados utilizada é publica e fornecida pela Agência Nacional de Saúde Suplementar (https://dadosabertos.ans.gov.br/FTP/PDA/operadoras_de_plano_de_saude_ativas/)
 
 ## Funcionalidades
 
